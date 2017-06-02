@@ -1,5 +1,5 @@
 /**
- * Настройки для запуска webpack-dev-server
+ * РќР°СЃС‚СЂРѕР№РєРё РґР»СЏ Р·Р°РїСѓСЃРєР° webpack-dev-server
  */
 module.exports = function () {
     return {
