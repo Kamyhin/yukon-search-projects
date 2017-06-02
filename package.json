@@ -1,0 +1,8 @@
+{
+  "name": "yukon-search-projects",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Kamyhin/yukon-search-projects.git",
+  "author": "Alexander Kamyhin <kamyhin@gmail.com>",
+  "license": "MIT"
+}
