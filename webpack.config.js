@@ -16,6 +16,18 @@ const common = merge([
             path: PATHS.build,
             filename: './build.js'
         },
+        module: {
+            rules: [
+                {
+                    test: /\.js$/,
+                    exclude: [/node_modules/],
+                    loader: "babel-loader",
+                    query: {
+                        presets: ['es2015', 'react']
+                    }
+                }
+            ]
+        },
         plugins: [
             new HtmlWebpackPlugin({
                 template: './src/index.ejs'
