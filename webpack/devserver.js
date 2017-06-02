@@ -1,7 +1,7 @@
 /**
  * Настройки для запуска webpack-dev-server
  */
-module.exports = function () {
+module.exports = () => {
     return {
         devServer: {
             stats: 'errors-only',

@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const devserver = require('./webpack/devserver');
+const node_env = require('./webpack/node_env');
 
 
 const PATHS = {
@@ -36,16 +37,18 @@ const common = merge([
     }
 ]);
 
-module.exports = function (env) {
+module.exports = env => {
     if (env === 'production') {
         return merge([
-            common
+            common,
+            node_env(env)
         ]);
     }
     if (env === 'development') {
         return merge([
             common,
-            devserver()
+            devserver(),
+            node_env(env)
         ])
     }
 };
