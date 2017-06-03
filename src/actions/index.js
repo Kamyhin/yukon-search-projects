@@ -1,16 +1,22 @@
 import axios from 'axios'
-import { RECEIVING } from '../constants/ActionsTypes'
+import { RECEIVING, SEARCH } from '../constants/ActionsTypes'
 
 
-export const receivingData = () => {
-    return dispatch => dispatch(receivingFind())
+export const receivingData = (employment=[], text="") => {
+    return dispatch => dispatch(receivingFind(employment, text))
 };
 
-const receivingFind = () => {
+const receivingFind = (employment, text) => {
+
     return dispatch =>
         axios.post('https://backend.yukon.to/rpc/project/find', {
             "method":"project.search-list",
-            "params":{"query":{}},
+            "params":{
+                "query":{
+                    "employment": employment,
+                    "text": `%${text}%`
+                }
+            },
             "id":512,
             "jsonrpc":"2.0"
         })
@@ -26,7 +32,7 @@ const receivingSearchList = search_id => {
                 "search_id": search_id,
                 "pager":{
                     "page":1,
-                    "size":20
+                    "size":21
                 }
             },
             "id":513,

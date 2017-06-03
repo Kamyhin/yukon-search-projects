@@ -1,0 +1,11 @@
+.search-from {
+    padding: 10px;
+}
+
+.search-form__input, .search-form__button, .search-form__select {
+    padding: 5px;
+}
+
+.search-form__select {
+    margin: 10px;
+}

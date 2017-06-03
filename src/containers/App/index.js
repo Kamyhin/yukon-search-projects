@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import _ from 'underscore'
 import { receivingData } from '../../actions'
 import Card from '../../components/Card'
+import SearchForm from '../../components/SearchForm'
 
 import './style.css'
 
@@ -25,6 +26,7 @@ class App extends Component {
     render() {
         return (
             <div className="wrap">
+                <SearchForm actions={this.props.actions}/>
                 {this.renderCard()}
             </div>
         )
@@ -40,7 +42,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
         actions: {
-            receivingData: () => dispatch(receivingData())
+            receivingData: (employment, text) => dispatch(receivingData(employment, text))
         }
     }
 };

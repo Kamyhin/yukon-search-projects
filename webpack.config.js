@@ -27,7 +27,7 @@ const common = merge([
                     exclude: [/node_modules/],
                     loader: "babel-loader",
                     query: {
-                        presets: ['es2015', 'react']
+                        presets: ['es2015','stage-0', 'react']
                     }
                 }
             ]
