@@ -6,6 +6,7 @@ const node_env = require('./webpack/node_env');
 const css = require('./webpack/css');
 const extractCSS = require('./webpack/css.extract');
 const images = require('./webpack/images');
+const uglifyJS = require('./webpack/js.uglify');
 
 
 const PATHS = {
@@ -46,7 +47,8 @@ module.exports = env => {
         return merge([
             common,
             node_env(env),
-            extractCSS()
+            extractCSS(),
+            uglifyJS()
         ]);
     }
     if (env === 'development') {
