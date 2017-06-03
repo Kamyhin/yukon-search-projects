@@ -4,12 +4,12 @@ module.exports = function() {
             rules: [
                 {
                     test: /\.(jpg|png|svg)$/,
-                    loader: 'file-loader',
+                    loader: 'url-loader',
                     options: {
                         name: 'images/[name].[ext]'
-                    },
-                },
-            ],
-        },
+                    }
+                }
+            ]
+        }
     };
 };

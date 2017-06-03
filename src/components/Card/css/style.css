@@ -21,19 +21,19 @@
 }
 
 .card__date {
-    background: url('./date.png') no-repeat;
+    background: url('../images/date.png') no-repeat;
     background-size: 20px;
     padding-left: 30px;
 }
 
 .card__summary {
-    background: url('./summary.png') no-repeat;
+    background: url('../images/summary.png') no-repeat;
     background-size: 20px;
     padding-left: 30px;
 }
 
 .card__look {
-    background: url('./look.png') no-repeat;
+    background: url('../images/look.png') no-repeat;
     background-size: 20px;
     padding-left: 30px;
 }

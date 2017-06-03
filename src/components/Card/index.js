@@ -1,11 +1,9 @@
-/**
- * Created by Alexander Kamyhin on 03.06.2017.
- */
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import _ from 'underscore'
 import moment from 'moment';
 
-import './card.css'
+import './css/style.css'
 
 
 export default class Card extends Component {
@@ -14,27 +12,27 @@ export default class Card extends Component {
         super(props)
     }
 
-    getFromTime(time){
+    getFromTime = (time) => {
         moment.locale('ru');
         let date = new Date() - time;
         return moment(date).fromNow();
-    }
+    };
 
-    getLang(lang) {
+    getLang = (lang) => {
         if (lang) {
             return _.map(lang, (num, key) => {
                 return <span className="card__lang-span" key={key}>{num.title}</span>
             })
         }
-    }
+    };
 
-    getSkill(skill) {
+    getSkill = (skill) => {
         if (skill) {
-            return _.map(skill, (num, key) => {
+            return _.map(skill, (num) => {
                 return num.title + ', '
             })
         }
-    }
+    };
 
     render() {
         const {project} = this.props;
@@ -52,3 +50,7 @@ export default class Card extends Component {
         )
     }
 }
+
+Card.propTypes = {
+    project: PropTypes.object.isRequired
+};

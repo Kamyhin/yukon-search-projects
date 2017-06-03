@@ -18,7 +18,7 @@ const common = merge([
         entry: PATHS.source + '/index.js',
         output: {
             path: PATHS.build,
-            filename: './build.js'
+            filename: 'js/build.js'
         },
         module: {
             rules: [

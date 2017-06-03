@@ -1,7 +1,8 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 
-import './search-form.css'
+import './css/style.css'
 
 
 export default class SearchForm extends Component {
@@ -48,3 +49,7 @@ export default class SearchForm extends Component {
         )
     }
 }
+
+SearchForm.propTypes = {
+    actions: PropTypes.object.isRequired
+};

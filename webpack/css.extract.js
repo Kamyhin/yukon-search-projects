@@ -15,7 +15,7 @@ module.exports = function(paths) {
             ]
         },
         plugins: [
-            new ExtractTextPlugin('./css/[name].css')
+            new ExtractTextPlugin('css/[name].css')
         ]
     };
 };

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import _ from 'underscore'
-import { receivingData } from '../../actions'
+import {receivingData} from '../../actions'
 import Card from '../../components/Card'
 import SearchForm from '../../components/SearchForm'
 
-import './style.css'
+import './css/style.css'
 
 class App extends Component {
 
