@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const merge = require('webpack-merge');
 const devserver = require('./webpack/devserver');
 const node_env = require('./webpack/node_env');
+const css = require('./webpack/css');
+const extractCSS = require('./webpack/css.extract');
+const images = require('./webpack/images');
 
 
 const PATHS = {
@@ -34,21 +37,24 @@ const common = merge([
                 template: './src/index.ejs'
             })
         ]
-    }
+    },
+    images()
 ]);
 
 module.exports = env => {
     if (env === 'production') {
         return merge([
             common,
-            node_env(env)
+            node_env(env),
+            extractCSS()
         ]);
     }
     if (env === 'development') {
         return merge([
             common,
             devserver(),
-            node_env(env)
+            node_env(env),
+            css()
         ])
     }
 };

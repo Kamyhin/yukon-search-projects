@@ -1,7 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import _ from 'underscore'
 import { receivingData } from '../../actions'
+import Card from '../../components/Card'
 
+import './style.css'
 
 class App extends Component {
 
@@ -13,9 +16,17 @@ class App extends Component {
         this.props.actions.receivingData();
     }
 
+    renderCard(){
+        return _.map(this.props.projects, (num, key) => {
+            return <Card key={key} project={num}/>
+        })
+    }
+
     render() {
         return (
-            <div>Yukon search projects</div>
+            <div className="wrap">
+                {this.renderCard()}
+            </div>
         )
     }
 }

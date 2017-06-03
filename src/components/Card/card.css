@@ -1,0 +1,50 @@
+.card {
+    display: inline-block;
+    background: #fff;
+    width: calc(30% - 10px);
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+    -moz-box-shadow: 0 10px 6px -6px #777;
+    box-shadow: 0 10px 6px -6px #777;
+}
+
+.card div {
+    height: 20px;
+}
+
+.card__title, .card__desc, .card__skill {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__date {
+    background: url('./date.png') no-repeat;
+    background-size: 20px;
+    padding-left: 30px;
+}
+
+.card__summary {
+    background: url('./summary.png') no-repeat;
+    background-size: 20px;
+    padding-left: 30px;
+}
+
+.card__look {
+    background: url('./look.png') no-repeat;
+    background-size: 20px;
+    padding-left: 30px;
+}
+
+.card__skill {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.card__skill-span {
+    margin: 10px;
+    padding: 5px;
+
+}

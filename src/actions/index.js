@@ -26,7 +26,7 @@ const receivingSearchList = search_id => {
                 "search_id": search_id,
                 "pager":{
                     "page":1,
-                    "size":10
+                    "size":20
                 }
             },
             "id":513,
@@ -37,7 +37,6 @@ const receivingSearchList = search_id => {
 };
 
 export const receiving = projects => {
-    console.log('projects', projects);
     return {
         type: RECEIVING,
         payload: projects
